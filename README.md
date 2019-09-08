@@ -7,3 +7,4 @@ This image is also available as **gyuuu/openj9:jdk8-20190906-184840**
 ## Demo Spring Boot application
 Basic Spring Boot Hello World application for testing.
 Can be built with `./build.sh` 
+**Shared classes cache is created during test execution** using **Surefire** plugin's **argLine** configuration provided in the **pom.xml**
