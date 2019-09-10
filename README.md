@@ -4,7 +4,10 @@
 The `openj9-jdk8-docker` folder contains a Dockerfile to build the OpenJ9 Docker build with the debug version provided by @pshipton
 This image is also available as **gyuuu/openj9:jdk8-20190906-184840**
 
+## Debug JVM Docker image with Maven build
+The `openj9-jdk8-maven-docker`folder contains a Dockerfile to build the previously mentioned OpenJ9 Docker image with maven for building the project
+
 ## Demo Spring Boot application
 Basic Spring Boot Hello World application for testing.
-Can be built with `./build.sh` 
+Can be built with with multi stage docker build 
 **Shared classes cache is created during test execution** using **Surefire** plugin's **argLine** configuration provided in the **pom.xml**
