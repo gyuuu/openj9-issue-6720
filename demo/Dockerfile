@@ -1,4 +1,4 @@
-FROM gyuuu/maven-openj9:jdk8-20190906-184840
+FROM gyuuu/maven-openj9:jdk11-20190906-184832
 WORKDIR /build
 ADD src/ src/
 COPY pom.xml .
@@ -6,7 +6,7 @@ RUN ls
 RUN mvn clean package
 
 #FROM adoptopenjdk/openjdk8-openj9:debian-slim
-FROM gyuuu/openj9:jdk8-20190906-184840
+FROM gyuuu/openj9:jdk11-20190906-184832
 WORKDIR /app
 COPY --from=0 /build/target/demo-*.jar demo.jar
 COPY --from=0 /build/classCache /classCache
